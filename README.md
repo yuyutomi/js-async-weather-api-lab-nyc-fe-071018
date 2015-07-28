@@ -1,3 +1,4 @@
+
 # Visualizing Temperature
 
 ## Problem Statement
@@ -9,6 +10,7 @@ request will open up access to huge amounts of free, useful data.
 In this lab, we will be practicing the use of an API that requires
 authentication as well as exploring an example of how to present API data in an
 interesting, appealing way.
+
 
 ## Objectives
 
