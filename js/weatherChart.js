@@ -1,4 +1,4 @@
-function getFarenheits(result){
+function getFahrenheits(result){
   return result.hourly_forecast.map(function(item){
     return item.temp.english
   })
