@@ -10,6 +10,6 @@ function generateDataSet(labels, data) {
   // Your code goes here
 }
 
-function makeAjaxRequest(endpoint, success) {
+function makeRequest(endpoint, success) {
   // Your code goes here
 }
