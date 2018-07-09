@@ -1,7 +1,21 @@
 # Visualizing Temperature
 
+## Problem Statement
+
+Many public APIs require some degree of authentication in order to use them.
+Taking the time to learn how to set up authentication and use it within a fetch
+request will open up access to huge amounts of free, useful data.
+
+In this lab, we will be practicing the use of an API that requires
+authentication as well as exploring an example of how to present API data in an
+interesting, appealing way.
+
 ## Objectives
-* Build a page that uses data from the [Weather Underground](http://www.wunderground.com/weather/api/) to render a line chart using [Chart.js](http://chartkick.com/). It should look something like the picture below.
+
+* Build a page that uses data from the [Weather
+Underground](http://www.wunderground.com/weather/api/) to render a line chart
+using [Chart.js](http://chartkick.com/). It should look something like the
+picture below
 
 ![example pic](http://ironboard-curriculum-content.s3.amazonaws.com/web-development/js-weather-api-ajax/example.png "Pic of Example")
 
@@ -9,6 +23,7 @@
 * Use a JavaScript visualization library.
 
 ## Instructions
+
 * Sign up for an account to generate a Weather Underground API key [here](http://www.wunderground.com/weather/api/d/login.html). You'll use this key for API calls.
 * You'll be using [Chart.js](http://www.chartjs.org/) to visualize the JSON from Weather Underground so check it out. Require the `Chart.js` library in the head of your HTML file. Double check that you required the library correctly by typing `Chart` into the browser's console. A function should be returned, not "undefined". (Note, you should require the version of Chart.JS that we have stored in `js/vendor` directory)
 * Require `weatherChart.js` below the lines where you required jQuery and Chart.js.
@@ -22,4 +37,3 @@
 * [Weather Underground](http://www.wunderground.com) - [Hourly](http://www.wunderground.com/weather/api/d/docs?d=data/hourly)
 * [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 * [Chart.js](http://www.chartjs.org/docs/#getting-started) - [Line Charts](http://www.chartjs.org/docs/#line-chart-example-usage)
-
