@@ -1,0 +1,28 @@
+{
+  "name": "js-async-weather-api-lab",
+  "version": "2.0.0",
+  "description": "A JavaScript lab for using fetch for the weather",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json"
+  },
+  "keywords": [
+    "JavaScript",
+    "DOM",
+    "HTML",
+    "fetch"
+  ],
+  "author": "flatironschool",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-preset-env": "1.7.0",
+    "chai": "4.1.2",
+    "expect": "1.20.2",
+    "file-system": "2.2.2",
+    "jsdom": "9.2.1",
+    "mocha": "5.2.0",
+    "mocha-jsdom": "2.0.0",
+    "mocha-multi": "1.0.1"
+  }
+}

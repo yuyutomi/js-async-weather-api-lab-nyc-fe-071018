@@ -26,7 +26,8 @@ picture below
 
 ## Instructions
 
-* Sign up for an account to generate a Weather Underground API key [here](http://www.wunderground.com/weather/api/d/login.html). You'll use this key for API calls.
+* Sign up for an account to generate an Open Weather Map API key [here](https://openweathermap.org/appid). You'll use this key for API calls.
+
 * You'll be using [Chart.js](http://www.chartjs.org/) to visualize the JSON from Weather Underground so check it out. Require the `Chart.js` library in the head of your HTML file. Double check that you required the library correctly by typing `Chart` into the browser's console. A function should be returned, not "undefined". (Note, you should require the version of Chart.JS that we have stored in `js/vendor` directory)
 * Require `weatherChart.js` below the lines where you required jQuery and Chart.js.
 * In `init.js`, make a variable, `API_KEY`, and define it as the string of your Weather Underground key.
