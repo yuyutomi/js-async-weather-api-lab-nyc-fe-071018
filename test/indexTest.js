@@ -97,36 +97,28 @@ describe('index', () => {
     })
 
     it('fetches the current weather', () => {
-      const city = document.getElementById('city')
-      const submit = document.getElementById('cityForm').children[1]
-      expect(city).toExist()
-      expect(submit).toExist()
 
-      city.value = "New York"
-      const fakeEvent = {
-        preventDefault: () => null,
-        target: {
-          children: [
-            {value: "London"}
-          ]
-        }
-      }
-
-      handleFormSubmit(fakeEvent)
+      fetchCurrentWeather("London")
 
       expect(fetchSpy.calls.length).toEqual(1, "fetch() wasn't called")
       const url = fetchSpy.calls[0].arguments[0]
 
-      expect(url).toMatch('https://api.openweathermap.org/data/2.5/weather?q=New')
+      expect(url).toMatch('https://api.openweathermap.org/data/2.5/weather')
     })
 
     it('sends a second fetch request for the 5-day forecast', () => {
-      const city = document.getElementById('city')
-      const submit = document.getElementById('cityForm').children[1]
-      expect(city).toExist()
-      expect(submit).toExist()
 
-      city.value = "New York"
+      fetchFiveDayForecast("London")
+
+      expect(fetchSpy.calls.length).toEqual(1, "fetch() wasn't called")
+      const url = fetchSpy.calls[0].arguments[0]
+
+      expect(url).toMatch('https://api.openweathermap.org/data/2.5/forecast')
+
+    })
+
+    it('calls both fetch requests upon form submission', () => {
+
       const fakeEvent = {
         preventDefault: () => null,
         target: {
@@ -146,7 +138,6 @@ describe('index', () => {
       expect(url2).toMatch(/(weather|forecast)/)
       expect(url).toNotMatch(url2)
     })
-
     it('fetches using the correct URL structure for multi-word city names', () => {
       const city = document.getElementById('city')
       const submit = document.getElementById('cityForm').children[1]
