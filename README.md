@@ -4,32 +4,28 @@
 ## Problem Statement
 
 Many public APIs require some degree of authentication in order to use them.
-Taking the time to learn how to set up authentication and use it within a fetch
-request will open up access to huge amounts of free, useful data.
+Learning how to set up API authentication and how to use API documentation will
+open up access to huge amounts of free, useful data.
 
 In this lab, we will be practicing the use of an API that requires
-authentication as well as exploring an example of how to present API data in an
-interesting, appealing way.
+authentication as well as explore how to present API data in
+multiple ways.
 
 
 ## Objectives
 
-* Build a page that uses data from the [Weather
-Underground](http://www.wunderground.com/weather/api/) to render a line chart
-using [Chart.js](http://chartkick.com/). It should look something like the
-picture below
-
-![example pic](http://ironboard-curriculum-content.s3.amazonaws.com/web-development/js-weather-api-ajax/example.png "Pic of Example")
-
-* Learn how to use `fetch` to keep data current.
-* Use a JavaScript visualization library.
+* Build a page that uses data from the [Open Weather Map API][openweather] to display
+current and forecasted weather information
+* Learn how to use `fetch` to get up-to-date data
+* Bonus: Render a line chart using [Chart.js](http://chartkick.com/) to provide a visual display of fetched data
 
 ## Instructions
 
-Sign up for an account to generate an Open Weather Map API key
+First, sign up for an account to generate an Open Weather Map API key
 [here](https://openweathermap.org/appid). You'll use this key for API calls. It
 may take around 10 minutes before your API key is fully activated, so in the
-mean time, start writing out the necessary JavaScript you will need inside `js/index.js`
+meantime, you can start writing out the JavaScript inside `js/index.js`, using
+the provided functions.
 
 This API uses URL parameters for queries, meaning that the whatever is entered
 into our form will need to be included with the URL, along with your API key.
@@ -43,15 +39,15 @@ The beginning of the url for your fetch request should be the following:
 `https://api.openweathermap.org/data/2.5/weather?`
 ```
 
-* Upon successful response, use the provided HTML table and ids to populate the
-DOM with weather information
+* Upon successful response, use the provided table and ids within `index.html` to
+populate the DOM with weather information
 
 **Note:** It is a good idea to `console.log` the JSON output of your fetch requests. If
 you are testing your code and sending frequent API requests, you may hit your
-rate limit and stop receiving data, and logging the JSON output will let you see
+rate limit and stop receiving data. Logging the JSON output will let you see
 if this is occurring.  If you have hit your limit, wait for a few minutes before
 trying again. Trying too many times while at a rate limit may cause your API key
-to be deactivated for 24 hours.
+to be deactivated for up to 24 hours.
 
 * Make sure your code handles any spaces entered into your form. Submissions like
 'New York' should return the correct weather data. For URL parameters, these
@@ -60,19 +56,20 @@ while 'New York' will work, fetching with a term like 'New York City' will
 return an error regardless of what you do.
 
 * Create a _second_ fetch request for a _different_ endpoint on the Open Weather
-API, this time, the 5 day forecast. This time, use the following as a base for
+API, the five day forecast. This time, use the following as a base for
 your fetch URL:
 
 ```js
 `https://api.openweathermap.org/data/2.5/forecast?`
 ```
 
-In the returned JSON data, there is a list array of weather forecasts for every
-three hours for the next five days. Iterate over this array and display each
-3-hour forecast as its own `div` that displays `dt_txt`, `temp`, and `humidity`.
-Append these `div`s within the `<aside>` element in `index.html`.
+In the returned JSON data, there will be a key, `list`, an array of weather
+information for every three hours for the next five days. Iterate over this
+array and display each three hour forecast as its own `div` that displays
+`dt_txt`, `temp`, and `humidity`. Append these `div` child elements within the
+`<aside>` element in `index.html`.
 
-* Bonus: Using the 5-day forecast data and the [ChartJS][chartjs] library, render
+* Bonus: Using the five day forecast data and the [ChartJS][chartjs] library, render
 a line graph in `index.html`. The library has already been made available in
 `index.html` and the canvas element is provided, but you'll need to use the
 examples in the [ChartJS][example] documentation to figure out how to display
@@ -85,7 +82,7 @@ the chart on the page. Within the `json.list` from the weather API, use the
 * [Open Weather API](https://openweathermap.org/)
 * [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
-[geo]: https://www.w3schools.com/htmL/html5_geolocation.asp
+[openweather]: https://openweathermap.org/
 [api]: https://openweathermap.org/current
 [chartjs]: https://www.chartjs.org/
 [example]: http://www.chartjs.org/docs/latest/
