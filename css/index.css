@@ -1,0 +1,57 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: lightblue;
+}
+
+form {
+  margin: 10px;
+}
+form * {
+  margin-left: 30%;
+  font-size: 150%;
+  display: block;
+  width: 40%;
+}
+
+h2 {
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 90%;
+  border: 1px solid black;
+  background: lightyellow;
+
+}
+
+th {
+  border-collapse: collapse;
+  width: 20%;
+}
+
+td {
+  text-align: center;
+  font-size: 175%;
+}
+
+aside {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+aside div {
+  text-align: center;
+  box-shadow: 3px 4px rgba(0,0,0,0.5);
+  margin: 5px;
+  background-color: lightyellow
+}
